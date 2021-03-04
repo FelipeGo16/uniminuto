@@ -1,0 +1,43 @@
+<h1 class="subheader">Pagina</h1>
+
+<div>
+  <table>
+    <tr>
+      <td>
+        <h3>Clientes</h3>
+      </td>
+      <td>
+        <h3>Clientes Mensuales</h3>
+      </td>
+      <td>
+        <h3>Clientes Anuales</h3>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <input [(ngModel)]="valor" type="number">
+      </td>
+      <td>
+        <p>{{resultM}}</p>
+
+      </td>
+      <td>
+        <p>{{resultA}}</p>
+
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <br><h5>Proyección días</h5>
+        <button (click)="Laborales()">Laborales</button>
+        <br><button (click)="Todos()">Todos</button>
+        <br><button (click)="Fin()">Fin de semana</button>
+      </td>    
+      
+    
+    </tr>
+  </table>
+
+</div>

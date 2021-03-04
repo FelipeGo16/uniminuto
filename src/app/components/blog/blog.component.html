@@ -1,0 +1,65 @@
+<h1 class="subheader">blog</h1>
+
+<div>
+    <p>Nombre del Empleado: {{nombre}}</p>
+    <p>Edad: {{edad}}</p>  
+    <p>Los últimos tres sueldos son: {{sueldos[0]}}, {{sueldos[1]}} y {{sueldos[2]}}</p>
+    <p>En los últimos 3 meses ha ganado: {{ultimos3Sueldos()}}</p>
+    <p>{{esActivo()}}</p>
+    <P>{{1+1}}</P>
+
+
+    <p>En los últimos 3 meses ha ganado: {{sueldos[0]+sueldos[1]+sueldos[2]}}</p>  
+    <p>El empleado dentro de 5 años tendrá:{{edad+5}}</p>
+
+    <p>Puede visitar el sitio ingresando <a href="{{sitio}}">aquí</a></p>
+    
+
+    <p>Nombre del Empleado: {{nombre}}</p>
+    <p>Edad: {{edad}}</p>  
+    <p *ngIf="edad>=18; else menor">Es mayor de edad.</p>
+    <ng-template #menor><p>Es menor de edad.</p></ng-template>
+
+    <table border="1">
+      <tr>
+        <td>Sueldos</td>
+      </tr>
+      <tr *ngFor="let sueldo of sueldos">
+        <td>{{sueldo}}</td>
+      </tr>
+    </table>
+
+
+    <p>Ingrese primer valor
+      <input [(ngModel)]="valor1" type="number">
+    </p>
+    <p>Ingrese segundo valor
+      <input [(ngModel)]="valor2" type="number">
+    </p>
+    <p>
+      <select [(ngModel)]="operacion">
+        <option value="ninguna">Elija una opción</option>
+        <option value="sumar">Sumar</option>
+        <option value="restar">Restar</option>
+        <option value="multiplicar">multiplicar</option>
+        <option value="dividir">Dividir</option>
+      </select>
+    </p>
+    <p>Resultado:
+      <span [ngSwitch]="operacion">
+        <span *ngSwitchCase="'sumar'">{{valor1+valor2}}</span>
+        <span *ngSwitchCase="'restar'">{{valor1-valor2}}</span>
+        <span *ngSwitchCase="'multiplicar'">{{valor1*valor2}}</span>
+        <span *ngSwitchCase="'dividir'">{{valor1/valor2}}</span>
+        <span *ngSwitchDefault>(No eligió operación)</span>
+      </span>
+    </p>
+
+    <p>Ingrese el valor
+      <input [(ngModel)]="valor3" type="text">
+    </p>
+
+    {{valor3}}
+
+
+  </div>

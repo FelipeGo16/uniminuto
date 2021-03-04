@@ -1,0 +1,26 @@
+<h1 class="subheader">home</h1>
+
+<h1>Notas</h1>
+
+<p>Ingrese la nota numero 1</p>
+<input [(ngModel)]="valor1" type="number">
+
+<p>Ingrese la nota numero 2</p>
+<input [(ngModel)]="valor2" type="number">
+
+<p>Ingrese la nota numero 3</p>
+<input [(ngModel)]="valor3" type="number">
+
+<p>{{Asignacion()}}</p>
+
+<table border="1">
+    <tr>
+        <td>Notas</td>
+    </tr>
+    <tr *ngFor="let i of arreglo">
+        <td> {{i}}</td>
+    </tr>
+    <tr>
+        <td>{{Sumar()}}</td>
+    </tr>
+</table>

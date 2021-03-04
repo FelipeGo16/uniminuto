@@ -1,0 +1,57 @@
+<br><br><br><h1 class="subheader">Formulario</h1>
+
+<form class="mid-form">
+
+    <div class="form-group">
+        <label for="nombre">Nombre</label>
+        <input type="text" name="nombre" [(ngModel)]="user.nombre"/>
+        {{user.nombre + ' ' + texto}}
+        
+    </div>
+
+    <div class="form-group">
+        <label for="apellidos">Apellidos</label>
+        <input type="text" name="apellidos" />
+    </div>
+
+    <div class="form-group">
+        <label for="bio">Biografia</label>
+        <textarea name="bio"></textarea>
+    </div>
+
+    <div class="form-group radibuttons">
+        <input type="radio" name="genero" value="hombre" /> Hombre 
+        <input type="radio" name="genero" value="mujer" /> Mujer 
+        <input type="radio" name="genero" value="otro" /> Otro
+    </div>
+
+    <div class="clearfix"></div>
+
+    <input type="submit" value="Enviar" class="btn btn-success" />
+    
+
+    <div class="form-group">
+        <label for="valor1">Valor 1</label>
+        <input type="number" name="valor1" [(ngModel)]="user.valor1"/>
+    </div>
+    <br><div class="form-group">
+        <label for="valor2">Valor 2</label>
+        <input type="number" name="valor2" [(ngModel)]="user.valor2"/>
+    </div>
+    <br><div class="form-group">
+        <label for="valor3">Valor 3</label>
+        <input type="number" name="valor3" [(ngModel)]="user.valor3"/>
+    </div>   
+       <p>SUMA  {{user.valor1 + user.valor2 + user.valor3}} </p>
+       <p>RESTA {{user.valor1 - user.valor2 - user.valor3}} </p>
+       <p>MULTIPLICACION {{user.valor1 * user.valor2 * user.valor3}} </p>
+       
+       <p>PROMEDIO {{promedio()}}</p>
+        
+    
+
+</form>
+
+
+<p>{{user.nombre}}</p>
+
